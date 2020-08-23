@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const _getBookValue = async () => {
       const bookValue = await superagent.get(
-        `http://localhost:5000/getBarcode/${result}`
+        `${process.env.API_URL}/getBarcode/${result}`
       )
       console.log(bookValue)
     }
